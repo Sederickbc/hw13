@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row justify-content-center"><input type="text" placeholder="Add a burger" id="burgerInput">
+<button class="btn btn-lg btn-success">Submit</button></div>
+  <div class="row">
+    <div class="col-5 col-offset-1">
+      <h3>Burgers To Devour</h3>
+      {{#each burgers}}
+      {{#unless devoured}}
+        <div class="row"><h6>{{burger_name}}</h6><button>Devour</button></div>
+      {{/unless}}
+      {{/each}}
+    </div>
+    <div class="col-5 col-offset-1">
+      <h3>Burgers Devoured</h3>
+      {{#each burgers}}
+      {{#if devoured}}
+        <div class="row"><h6>{{burger_name}}</h6><button>Order Again</button></div>
+      {{/if}}
+      {{/each}}
+    </div>
+  </div>
+</div>
